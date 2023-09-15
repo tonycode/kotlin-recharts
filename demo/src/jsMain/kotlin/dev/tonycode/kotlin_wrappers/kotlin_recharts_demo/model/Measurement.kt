@@ -5,8 +5,15 @@ package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.model
 @JsExport
 data class Measurement(
 
-    val day: Int,
+    /**
+     * format: "dd-MMM"
+     *
+     * e.g.: "31-dec"
+     */
+    val date: String,
 
-    val value: Double
+    val steps: Int,
+
+    val avgBpm: Double
 
 )

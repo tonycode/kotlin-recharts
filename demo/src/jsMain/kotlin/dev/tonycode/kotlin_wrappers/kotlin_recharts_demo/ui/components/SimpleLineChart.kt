@@ -1,5 +1,6 @@
 package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components
 
+import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.model.Measurement
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.repository.stubMeasurements
 import react.FC
 import react.Props
@@ -29,7 +30,7 @@ val SimpleLineChart = FC<Props> {
                 strokeDash(3, 3)
             }
             XAxis {
-                dataKey = "day"
+                dataKey = Measurement::date.name
             }
             YAxis()
 
@@ -38,7 +39,7 @@ val SimpleLineChart = FC<Props> {
 
             Line {
                 type = "monotone"
-                dataKey = "value"
+                dataKey = Measurement::steps.name
                 stroke = "#8884d8"
                 activeDot(8)
             }

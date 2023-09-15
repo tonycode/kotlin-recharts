@@ -4,11 +4,11 @@ import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.model.Measurement
 
 
 val stubMeasurements = listOf(
-    Measurement(1, 1.0),
-    Measurement(2, 2.0),
-    Measurement(3, 3.0),
-    Measurement(4, 2.0),
-    Measurement(5, 3.0),
-    Measurement(6, 4.0),
-    Measurement(7, 3.0),
+    Measurement("1-aug", 5123, 86.5),
+    Measurement("2-aug", 7891, 89.7),
+    Measurement("3-aug", 12345, 91.3),
+    Measurement("4-aug", 456, 76.2),
+    Measurement("5-aug", 3123, 82.5),
+    Measurement("6-aug", 5678, 87.1),
+    Measurement("7-aug", 9023, 89.0),
 )
