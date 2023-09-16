@@ -9,6 +9,8 @@ import recharts.Legend
 import recharts.Line
 import recharts.LineChart
 import recharts.LineType
+import recharts.ReferenceArea
+import recharts.ReferenceLine
 import recharts.ResponsiveContainer
 import recharts.Tooltip
 import recharts.XAxis
@@ -69,6 +71,20 @@ val BiaxialLineChart = FC<Props> {
                 dataKey = Measurement::avgBpm.name
                 yAxisId = yAxisRightId
                 stroke = Color("red")
+            }
+
+            ReferenceLine {
+                x = stubMeasurements[2].date
+                yAxisId = yAxisLeftId
+                stroke = Color("black")
+                label = "event 1"
+            }
+            ReferenceArea {
+                x1 = stubMeasurements[3].date
+                x2 = stubMeasurements[5].date
+                yAxisId = yAxisLeftId
+                stroke = Color("#ccc")
+                label = "vacation"
             }
         }
     }
