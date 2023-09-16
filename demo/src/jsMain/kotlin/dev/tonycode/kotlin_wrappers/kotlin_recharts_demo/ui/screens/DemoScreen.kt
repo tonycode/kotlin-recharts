@@ -1,19 +1,61 @@
 package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens
 
+import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components.BiaxialLineChart
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components.SimpleLineChart
 import emotion.react.css
 import react.FC
+import react.Fragment
 import react.Props
 import react.dom.html.ReactHTML.div
+import react.dom.html.ReactHTML.li
+import react.dom.html.ReactHTML.p
+import react.dom.html.ReactHTML.ul
+import react.useState
+import web.cssom.Color
 import web.cssom.px
 
 
 val DemoScreen = FC<Props> {
 
-    div {
-        css { marginTop = 24.px }
+    var selectedExample: Examples by useState(Examples.SIMPLE_LINE_CHART)
 
-        SimpleLineChart()
+
+    Fragment {
+        // example selector
+        ul {
+            css { marginTop = 24.px }
+
+            Examples.entries.forEach { example ->
+                li {
+                    onClick = {
+                        selectedExample = example
+                    }
+
+                    p {
+                        css {
+                            if (selectedExample == example) color = Color("blue")
+                        }
+
+                        +example.title
+                    }
+                }
+            }
+        }
+
+        // example content
+        div {
+            css { marginTop = 40.px }
+
+            when (selectedExample) {
+                Examples.SIMPLE_LINE_CHART -> SimpleLineChart()
+                Examples.BIAXIAL_LINE_CHART -> BiaxialLineChart()
+            }
+        }
     }
 
+}
+
+enum class Examples(val title: String) {
+    SIMPLE_LINE_CHART("SimpleLineChart"),
+    BIAXIAL_LINE_CHART("BiaxialLineChart"),
 }

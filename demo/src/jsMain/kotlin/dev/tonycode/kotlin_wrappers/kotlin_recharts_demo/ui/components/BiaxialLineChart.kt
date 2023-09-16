@@ -13,28 +13,46 @@ import recharts.ResponsiveContainer
 import recharts.Tooltip
 import recharts.XAxis
 import recharts.YAxis
+import recharts.YAxisOrientation
 import recharts.activeDot
+import recharts.margin
 import recharts.strokeDash
 import web.cssom.Color
 import web.cssom.pct
 
 
-val SimpleLineChart = FC<Props> {
+val BiaxialLineChart = FC<Props> {
 
     ResponsiveContainer {
         width = 100.pct
         height = 480
 
         LineChart {
+            margin(5, 30, 5, 5)
             data = stubMeasurements.toTypedArray()
 
+            val yAxisLeftId = "left"
+            val yAxisRightId = "right"
+
             CartesianGrid {
-                strokeDash(3, 3)
+                vertical = false
+                fill = Color("#ccc")
+                fillOpacity = 0.2
+                stroke = Color("red")
+                strokeDash(4, 1, 2)
             }
             XAxis {
                 dataKey = Measurement::date.name
             }
-            YAxis()
+            YAxis {
+                yAxisId = yAxisLeftId
+                //label = "steps"
+            }
+            YAxis {
+                yAxisId = yAxisRightId
+                orientation = YAxisOrientation.right
+                //label = "avg bpm"
+            }
 
             Tooltip()
             Legend()
@@ -42,8 +60,15 @@ val SimpleLineChart = FC<Props> {
             Line {
                 type = LineType.monotone
                 dataKey = Measurement::steps.name
+                yAxisId = yAxisLeftId
                 stroke = Color("#8884d8")
                 activeDot(8)
+            }
+            Line {
+                type = LineType.monotone
+                dataKey = Measurement::avgBpm.name
+                yAxisId = yAxisRightId
+                stroke = Color("red")
             }
         }
     }
