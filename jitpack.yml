@@ -4,8 +4,12 @@ before_install:
     - uname -a
     - cat /etc/*-release
     - strings /lib/x86_64-linux-gnu/libc.so.6 | grep GLIBC
-    - sudo apt update -y
-    - sudo apt upgrade -y libc6
-    - sudo apt-get install build-essential -y
+    #- sudo apt update -y
+    #- sudo apt upgrade -y libc6
+    #- sudo apt-get install build-essential -y
+    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+    - source ~/.bashrc
+    - nvm install 18.17.1
+    - nvm use 18.17.1
 install:
-    - ./gradlew clean build library:publishJsPublicationToMavenLocalRepository
+    - ./gradlew -PjitpackBuild=true clean build library:publishJsPublicationToMavenLocalRepository

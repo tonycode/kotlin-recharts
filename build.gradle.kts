@@ -24,6 +24,11 @@ plugins.withType<YarnPlugin> {
 plugins.withType<NodeJsRootPlugin> {
     the<NodeJsRootExtension>().apply {
         nodeVersion = "18.17.1"  // https://nodejs.org/en - LTS
+        if (properties["jitpackBuild"] == "true") {
+            println("*** jitpack build customizations to support absent GLIBC 2.25+")
+            installationDir = File("~/.nvm/versions/node/v18.17.1/")
+            download = false
+        }
     }
 }
 
