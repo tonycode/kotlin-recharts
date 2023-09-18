@@ -58,4 +58,18 @@ external interface LineProps : Props {
 
     var activeDot: ActiveDot
 
+    /**
+     * Whether to connect a graph line across null points
+     *
+     * default: false
+     */
+    var connectNulls: Boolean
+
+    /**
+     * If set false, animation of line will be disabled
+     *
+     * default: true in CSR, and false in SSR
+     */
+    var isAnimationActive: Boolean
+
 }

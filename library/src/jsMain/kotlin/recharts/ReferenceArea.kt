@@ -64,6 +64,8 @@ external interface ReferenceAreaProps : Props {
 
     var stroke: Color
 
+    var fill: Color
+
     var label: String
 
 }
