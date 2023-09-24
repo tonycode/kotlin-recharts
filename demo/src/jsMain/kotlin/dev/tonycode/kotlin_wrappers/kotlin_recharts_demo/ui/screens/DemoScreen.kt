@@ -1,5 +1,6 @@
 package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens
 
+import antd.Typography
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components.BiaxialLineChart
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components.SimpleLineChart
 import emotion.react.css
@@ -31,10 +32,11 @@ val DemoScreen = FC<Props> {
                         selectedExample = example
                     }
 
-                    p {
+                    Typography.Text {
                         css {
                             if (selectedExample == example) color = Color("blue")
                         }
+                        code = true
 
                         +example.title
                     }

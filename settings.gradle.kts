@@ -17,6 +17,7 @@ dependencyResolutionManagement {
 
         mavenCentral()  // https://repo.maven.apache.org/maven2/
         //maven("https://jitpack.io")
+        maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")  // for kotlin-antd
 
         //mavenLocal()  // ~/.m2/repository
     }

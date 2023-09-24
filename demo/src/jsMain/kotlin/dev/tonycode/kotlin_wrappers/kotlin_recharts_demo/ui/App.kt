@@ -29,6 +29,10 @@ val App = FC<Props> {
     // content
     DemoScreen()
 
+    div {
+        css { height = 56.px }
+    }
+
     // footer
     div {
         css {
