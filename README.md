@@ -29,6 +29,8 @@ implementation("dev.tonycode.kotlin-wrappers:kotlin-recharts:0.1.0-SNAPSHOT") {
 
 ```kotlin
 import recharts.*
+import web.cssom.Color
+import web.cssom.pct
 
 
 ResponsiveContainer {
