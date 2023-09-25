@@ -7,6 +7,8 @@ Kotlin wrapper for **ReCharts** (React charting library, https://recharts.org/)
 
 **LIVE DEMO**: https://tonycode.dev/demos/kotlin-recharts-demo/
 
+(this is deployed `demo` module from this repository)
+
 <hr />
 
 <img src="docs/kotlin-recharts-promo.png" alt="preview" title="preview" />
