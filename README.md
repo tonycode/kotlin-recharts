@@ -9,6 +9,8 @@ Kotlin wrapper for **ReCharts** (React charting library, https://recharts.org/)
 
 <hr />
 
+<img src="docs/kotlin-recharts-promo.png" alt="preview" title="preview" />
+
 
 ## Usage
 
