@@ -1,15 +1,14 @@
 package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens
 
 import antd.Typography
-import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components.BiaxialLineChart
-import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components.SimpleLineChart
+import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens.line_chart.BiaxialLineChart
+import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens.line_chart.SimpleLineChart
 import emotion.react.css
 import react.FC
 import react.Fragment
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.li
-import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.ul
 import react.useState
 import web.cssom.Color

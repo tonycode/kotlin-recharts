@@ -1,4 +1,4 @@
-package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.components
+package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens.line_chart
 
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.model.Measurement
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.repository.stubMeasurements
