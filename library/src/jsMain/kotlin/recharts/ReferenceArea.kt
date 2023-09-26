@@ -12,7 +12,7 @@ import web.cssom.Color
  * https://recharts.org/en-US/api/ReferenceArea
  */
 @JsName("ReferenceArea")
-external val ReferenceArea : ComponentClass<ReferenceAreaProps>
+external val ReferenceArea: ComponentClass<ReferenceAreaProps>
 
 external interface ReferenceAreaProps : Props {
 

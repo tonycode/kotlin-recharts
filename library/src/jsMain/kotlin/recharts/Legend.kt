@@ -8,4 +8,4 @@ import react.Props
 
 
 @JsName("Legend")
-external val Legend : ComponentClass<Props>
+external val Legend: ComponentClass<Props>

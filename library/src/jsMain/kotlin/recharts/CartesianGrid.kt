@@ -12,7 +12,7 @@ import web.cssom.Color
  * https://recharts.org/en-US/api/CartesianGrid
  */
 @JsName("CartesianGrid")
-external val CartesianGrid : ComponentClass<CartesianGridProps>
+external val CartesianGrid: ComponentClass<CartesianGridProps>
 
 external interface CartesianGridProps : Props {
 

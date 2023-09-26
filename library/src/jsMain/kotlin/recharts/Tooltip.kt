@@ -8,4 +8,4 @@ import react.Props
 
 
 @JsName("Tooltip")
-external val Tooltip : ComponentClass<Props>
+external val Tooltip: ComponentClass<Props>

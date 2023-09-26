@@ -12,7 +12,7 @@ import web.cssom.Color
  * https://recharts.org/en-US/api/Line
  */
 @JsName("Line")
-external val Line : ComponentClass<LineProps>
+external val Line: ComponentClass<LineProps>
 
 external interface LineProps : Props {
 

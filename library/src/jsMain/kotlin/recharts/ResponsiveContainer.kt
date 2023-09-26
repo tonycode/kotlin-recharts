@@ -9,7 +9,7 @@ import web.cssom.Length
 
 
 @JsName("ResponsiveContainer")
-external val ResponsiveContainer : ComponentClass<ResponsiveContainerProps>
+external val ResponsiveContainer: ComponentClass<ResponsiveContainerProps>
 
 external interface ResponsiveContainerProps : Props {
 

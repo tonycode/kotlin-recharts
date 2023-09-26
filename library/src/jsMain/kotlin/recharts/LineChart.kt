@@ -8,7 +8,7 @@ import react.Props
 
 
 @JsName("LineChart")
-external val LineChart : ComponentClass<LineChartProps>
+external val LineChart: ComponentClass<LineChartProps>
 
 external interface LineChartProps : Props {
 

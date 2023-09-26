@@ -11,7 +11,7 @@ import react.Props
  * https://recharts.org/en-US/api/XAxis
  */
 @JsName("XAxis")
-external val XAxis : ComponentClass<XAxisProps>
+external val XAxis: ComponentClass<XAxisProps>
 
 external interface XAxisProps : Props {
 

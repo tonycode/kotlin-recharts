@@ -11,7 +11,7 @@ import react.Props
  * https://recharts.org/en-US/api/YAxis
  */
 @JsName("YAxis")
-external val YAxis : ComponentClass<YAxisProps>
+external val YAxis: ComponentClass<YAxisProps>
 
 external interface YAxisProps : Props {
 

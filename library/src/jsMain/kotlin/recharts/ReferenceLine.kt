@@ -9,7 +9,7 @@ import web.cssom.Color
 
 
 @JsName("ReferenceLine")
-external val ReferenceLine : ComponentClass<ReferenceLineProps>
+external val ReferenceLine: ComponentClass<ReferenceLineProps>
 
 external interface ReferenceLineProps : Props {
 
