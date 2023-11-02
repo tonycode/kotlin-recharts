@@ -9,7 +9,7 @@ based on **recharts** version: [2.7.2](https://github.com/recharts/recharts/rele
 
 **LIVE DEMO**: https://tonycode.dev/demos/kotlin-recharts-demo/
 
-(this is deployed `demo` module from this repository)
+(this is a deployed `demo` module from this repository)
 
 <hr />
 
