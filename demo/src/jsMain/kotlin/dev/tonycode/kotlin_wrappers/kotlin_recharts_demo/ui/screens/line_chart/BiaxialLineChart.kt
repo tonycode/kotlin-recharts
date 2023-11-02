@@ -23,7 +23,7 @@ import web.cssom.Color
 import web.cssom.pct
 
 
-val BiaxialLineChart = FC<Props> {
+val BiaxialLineChart = FC<Props>("BiaxialLineChart") {
 
     ResponsiveContainer {
         width = 100.pct

@@ -37,7 +37,7 @@ import web.cssom.pct
 import web.cssom.px
 
 
-val SimpleLineChart = FC<Props> {
+val SimpleLineChart = FC<Props>("SimpleLineChart") {
 
     var cartesianGridHorizontal: Boolean by useState(true)
     var cartesianGridVertical: Boolean by useState(true)

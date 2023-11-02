@@ -15,7 +15,7 @@ import web.cssom.Color
 import web.cssom.px
 
 
-val DemoScreen = FC<Props> {
+val DemoScreen = FC<Props>("DemoScreen") {
 
     var selectedExample: Examples by useState(Examples.SIMPLE_LINE_CHART)
 
