@@ -97,31 +97,31 @@ publishing {
 
 fun MavenPublication.configurePom() {
     pom {
-        name.set(rootProject.name)
-        description.set("Kotlin wrapper for ReCharts (React charting library, https://recharts.org/)")
-        url.set("https://github.com/tonycode/kotlin-recharts")
+        name = rootProject.name
+        description = "Kotlin wrapper for ReCharts (React charting library, https://recharts.org/)"
+        url = "https://github.com/tonycode/kotlin-recharts"
 
         licenses {
             license {
-                name.set("MIT License")
-                url.set("https://github.com/tonycode/kotlin-recharts/blob/main/LICENSE")
+                name = "MIT License"
+                url = "https://github.com/tonycode/kotlin-recharts/blob/main/LICENSE"
             }
         }
 
         developers {
             developer {
-                id.set("tonycode")
-                name.set("Anton Vasilev")
-                email.set("opensource@tonycode.dev")
-                organization.set("tonycode")
-                organizationUrl.set("https://tonycode.dev/")
+                id = "tonycode"
+                name = "Anton Vasilev"
+                email = "opensource@tonycode.dev"
+                organization = "tonycode"
+                organizationUrl = "https://tonycode.dev/"
             }
         }
 
         scm {
-            connection.set("scm:git:git://github.com/tonycode/kotlin-recharts.git")
-            developerConnection.set("scm:git:git@github.com:tonycode/kotlin-recharts.git")
-            url.set("https://github.com/tonycode/kotlin-recharts")
+            connection = "scm:git:git://github.com/tonycode/kotlin-recharts.git"
+            developerConnection = "scm:git:git@github.com:tonycode/kotlin-recharts.git"
+            url = "https://github.com/tonycode/kotlin-recharts"
         }
     }
 }
