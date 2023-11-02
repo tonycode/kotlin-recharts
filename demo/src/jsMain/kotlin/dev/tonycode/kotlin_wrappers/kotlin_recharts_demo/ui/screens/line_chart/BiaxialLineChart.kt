@@ -4,7 +4,10 @@ import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.model.Measurement
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.repository.stubMeasurements
 import react.FC
 import react.Props
+import react.create
 import recharts.CartesianGrid
+import recharts.Label
+import recharts.LabelPosition
 import recharts.Legend
 import recharts.Line
 import recharts.LineChart
@@ -18,6 +21,7 @@ import recharts.YAxis
 import recharts.YAxisOrientation
 import recharts.activeDot
 import recharts.margin
+import recharts.setLabel
 import recharts.strokeDash
 import web.cssom.Color
 import web.cssom.pct
@@ -48,12 +52,20 @@ val BiaxialLineChart = FC<Props>("BiaxialLineChart") {
             }
             YAxis {
                 yAxisId = yAxisLeftId
-                //label = "steps"
+                setLabel(Label.create {
+                    value = "steps"
+                    angle = -90
+                    position = LabelPosition.insideLeft
+                })
             }
             YAxis {
                 yAxisId = yAxisRightId
                 orientation = YAxisOrientation.right
-                //label = "avg bpm"
+                setLabel(Label.create {
+                    value = "avg bpm"
+                    angle = -90
+                    position = LabelPosition.insideRight
+                })
             }
 
             Tooltip()
