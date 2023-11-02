@@ -1,18 +1,13 @@
 package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens
 
-import antd.Typography
+import antd.Tabs
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens.line_chart.BiaxialLineChart
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens.line_chart.SimpleLineChart
-import emotion.react.css
+import js.core.jso
 import react.FC
-import react.Fragment
 import react.Props
-import react.dom.html.ReactHTML.div
-import react.dom.html.ReactHTML.li
-import react.dom.html.ReactHTML.ul
+import react.create
 import react.useState
-import web.cssom.Color
-import web.cssom.px
 
 
 val DemoScreen = FC<Props>("DemoScreen") {
@@ -20,38 +15,23 @@ val DemoScreen = FC<Props>("DemoScreen") {
     var selectedExample: Examples by useState(Examples.SIMPLE_LINE_CHART)
 
 
-    Fragment {
-        // example selector
-        ul {
-            css { marginTop = 24.px }
+    Tabs {
+        activeKey = selectedExample.name
 
-            Examples.entries.forEach { example ->
-                li {
-                    onClick = {
-                        selectedExample = example
-                    }
+        items = arrayOf(
+            jso {
+                key = Examples.SIMPLE_LINE_CHART.name
+                label = Examples.SIMPLE_LINE_CHART.title
+                children = SimpleLineChart.create()
+            },
+            jso {
+                key = Examples.BIAXIAL_LINE_CHART.name
+                label = Examples.BIAXIAL_LINE_CHART.title
+                children = BiaxialLineChart.create()
+            },
+        )
 
-                    Typography.Text {
-                        css {
-                            if (selectedExample == example) color = Color("blue")
-                        }
-                        code = true
-
-                        +example.title
-                    }
-                }
-            }
-        }
-
-        // example content
-        div {
-            css { marginTop = 40.px }
-
-            when (selectedExample) {
-                Examples.SIMPLE_LINE_CHART -> SimpleLineChart()
-                Examples.BIAXIAL_LINE_CHART -> BiaxialLineChart()
-            }
-        }
+        onChange = { selectedExample = Examples.valueOf(it) }
     }
 
 }
