@@ -10,12 +10,16 @@ import antd.Typography
 import antd.setOptions
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.model.Measurement
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.repository.stubMeasurements
+import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.util.ifNotNull
 import emotion.react.css
 import react.FC
 import react.Props
+import react.create
 import react.dom.html.ReactHTML.input
 import react.useState
 import recharts.CartesianGrid
+import recharts.Label
+import recharts.LabelPosition
 import recharts.Legend
 import recharts.Line
 import recharts.LineChart
@@ -27,6 +31,7 @@ import recharts.YAxis
 import recharts.YAxisOrientation
 import recharts.YAxisOrientationFactory
 import recharts.activeDot
+import recharts.setLabel
 import web.cssom.Color
 import web.cssom.pct
 import web.cssom.px
@@ -40,6 +45,7 @@ val SimpleLineChart = FC<Props> {
 
     var yAxisHide: Boolean by useState(false)
     var yAxisOrientation: YAxisOrientation by useState(YAxisOrientation.left)
+    var yAxisLabel: String? by useState(null)
 
     var lineIsAnimationActive: Boolean by useState(true)
 
@@ -68,6 +74,13 @@ val SimpleLineChart = FC<Props> {
                 YAxis {
                     hide = yAxisHide
                     orientation = yAxisOrientation
+                    yAxisLabel?.ifNotNull { labelValue ->
+                        setLabel(Label.create {
+                            value = labelValue
+                            position = LabelPosition.insideLeft
+                            angle = -90
+                        })
+                    }
                 }
 
                 Tooltip()
@@ -186,6 +199,23 @@ val SimpleLineChart = FC<Props> {
                     onChange = {
                         console.dir(it)
                         yAxisOrientation = YAxisOrientationFactory.ofValue(it.target.value)
+                    }
+                }
+            }
+
+            Space {
+                direction = Direction.horizontal
+
+                Typography.Text {
+                    code = true
+                    +"label"
+                }
+
+                input {
+                    value = yAxisLabel
+
+                    onChange = {
+                        yAxisLabel = it.target.value
                     }
                 }
             }

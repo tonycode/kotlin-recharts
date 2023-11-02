@@ -41,6 +41,13 @@ external interface YAxisProps : Props {
      */
     var orientation: YAxisOrientation
 
-    var label: String
+    /**
+     * If set a string or a number, default label will be drawn, and the option is content.
+     * If set a React element, the option is the custom react element of drawing label.
+     * If an object, the option is the props of a new Label instance.
+     *
+     * see: [YAxisProps.setLabel]
+     */
+    var label: dynamic  // String | Number | ReactElement | Object
 
 }
