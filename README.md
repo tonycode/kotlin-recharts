@@ -3,6 +3,8 @@ kotlin-recharts
 
 Kotlin wrapper for **ReCharts** (React charting library, https://recharts.org/)
 
+based on **recharts** version: [2.7.2](https://github.com/recharts/recharts/releases/tag/v2.7.2)
+
 <hr />
 
 **LIVE DEMO**: https://tonycode.dev/demos/kotlin-recharts-demo/
