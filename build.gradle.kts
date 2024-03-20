@@ -13,7 +13,7 @@ plugins {
 
 plugins.withType<YarnPlugin> {
     the<YarnRootExtension>().apply {
-        version = "1.22.19"  // https://www.npmjs.com/package/yarn
+        version = libs.versions.yarn.get()
         lockFileDirectory = projectDir
         yarnLockMismatchReport = YarnLockMismatchReport.NONE
         ignoreScripts = false  // WA from https://youtrack.jetbrains.com/issue/KT-52578
@@ -22,15 +22,15 @@ plugins.withType<YarnPlugin> {
 
 plugins.withType<NodeJsRootPlugin> {
     the<NodeJsRootExtension>().apply {
-        nodeVersion = "20.9.0"  // https://nodejs.org/en - LTS
+        nodeVersion = libs.versions.nodejs.get()
     }
 }
 
 
 //region tasks
-/* generate gradle-wrapper with `gradle wrapper` */
+/* generates gradle-wrapper via `gradle wrapper` */
 tasks.wrapper {
-    gradleVersion = "8.4"
+    gradleVersion = libs.versions.gradle.get()
     distributionType = Wrapper.DistributionType.ALL
 }
 
