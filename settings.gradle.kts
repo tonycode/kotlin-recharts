@@ -3,8 +3,8 @@ rootProject.name = "kotlin-recharts"
 
 pluginManagement {
     repositories {
-        gradlePluginPortal()
-        mavenCentral()
+        gradlePluginPortal()  // https://plugins.gradle.org
+        mavenCentral()  // https://repo.maven.apache.org/maven2/
     }
 }
 

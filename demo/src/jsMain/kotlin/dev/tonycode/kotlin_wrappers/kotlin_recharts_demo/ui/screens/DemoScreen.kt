@@ -3,7 +3,7 @@ package dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens
 import antd.Tabs
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens.line_chart.BiaxialLineChart
 import dev.tonycode.kotlin_wrappers.kotlin_recharts_demo.ui.screens.line_chart.SimpleLineChart
-import js.core.jso
+import js.objects.jso
 import react.FC
 import react.Props
 import react.create

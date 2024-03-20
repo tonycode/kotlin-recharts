@@ -21,7 +21,7 @@
         - `library/build.gradle.kts`: `isRelease = true` for release build
             - https://repo.maven.apache.org/maven2/dev/tonycode/
 - **demo**
-    - bundle distributable: `./gradlew demo:jsBrowserDistribution -Pprod=true` (production - no sourcemaps/logs)
+    - bundle distributable: `./gradlew demo:jsBrowserDistribution -Pprod=true` (production - no source-maps/logs)
         - see `demo/build/dist/js/productionExecutable/*`
 
 ### chore

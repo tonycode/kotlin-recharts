@@ -60,11 +60,11 @@ kotlin {
         val jsMain by getting {
             dependencies {
                 //// Core
-                implementation(platform(libs.kotlin.bom.get()))  // Align versions of all Kotlin components
+                implementation(project.dependencies.platform(libs.kotlin.bom.get()))  // Align versions of all Kotlin components
                 implementation(libs.kotlin.stdlib)  // Use the Kotlin standard library
 
                 //// UI
-                implementation(platform(libs.kotlin.wrappers.bom.get()))
+                implementation(project.dependencies.platform(libs.kotlin.wrappers.bom.get()))
                 implementation(libs.kotlinw.react)
                 implementation(libs.kotlinw.react.dom)
                 implementation(libs.kotlinw.emotion)
