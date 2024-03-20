@@ -14,32 +14,32 @@ plugins {
 
 val projectGroup = "dev.tonycode.kotlin-wrappers"
 val projectArtifact = "kotlin-recharts-demo"
-val projectPackage = "$projectGroup.$projectArtifact"
+val projectPackage = "$projectGroup.$projectArtifact".replace("-", "_")
 val projectName = projectArtifact
 val projectVersion = "0.1.0-SNAPSHOT"
-val buildNumber = "0"
+val buildNumber = 0
 val isProduction: Boolean = (properties["prod"] == "true")  // turn off debugging stuff (sourcemaps/logging/..) for prod
 
 group = projectGroup
 version = projectVersion
 
 buildConfig {
-    packageName(projectPackage.replace("-", "_"))
+    packageName(projectPackage)
 
     // build info
-    buildConfigField("String", "APP_NAME", "\"$projectName\"")
-    buildConfigField("String", "BUILD_VERSION", "\"$projectVersion\"")
-    buildConfigField("int", "BUILD_NUMBER", buildNumber)
-    buildConfigField("String", "GIT_BRANCH_NAME", "\"${ grgit.branch.current().name }\"")
-    buildConfigField("String", "GIT_COMMIT_ID", "\"${ grgit.head().abbreviatedId }\"")
-    buildConfigField("String", "BUILD_TIME", "\"${
+    buildConfigField("APP_NAME", projectName)
+    buildConfigField("BUILD_VERSION", projectVersion)
+    buildConfigField("BUILD_NUMBER", buildNumber)
+    buildConfigField("GIT_BRANCH_NAME", grgit.branch.current().name)
+    buildConfigField("GIT_COMMIT_ID", grgit.head().abbreviatedId)
+    buildConfigField("BUILD_TIME",
         SimpleDateFormat("yyyy.MM.dd EEE 'at' HH:mm:ss.SSS z").apply {
             timeZone = TimeZone.getTimeZone("GMT")
         }.format(Date(System.currentTimeMillis()))
-    }\"")
-    buildConfigField("long", "BUILD_TIME_MILLIS", "${ System.currentTimeMillis() }L")
+    )
+    buildConfigField("BUILD_TIME_MILLIS", System.currentTimeMillis())
 
-    buildConfigField("boolean", "IS_PRODUCTION", isProduction.toString())
+    buildConfigField("IS_PRODUCTION", isProduction)
 }
 
 kotlin {
