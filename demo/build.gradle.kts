@@ -16,8 +16,7 @@ val projectGroup = "dev.tonycode.kotlin-wrappers"
 val projectArtifact = "kotlin-recharts-demo"
 val projectPackage = "$projectGroup.$projectArtifact".replace("-", "_")
 val projectName = projectArtifact
-val projectVersion = "0.1.0-SNAPSHOT"
-val buildNumber = 0
+val projectVersion = libs.versions.rechartsWrapper.get()
 val isProduction: Boolean = (properties["prod"] == "true")  // turn off debugging stuff (sourcemaps/logging/..) for prod
 
 group = projectGroup
@@ -29,7 +28,6 @@ buildConfig {
     // build info
     buildConfigField("APP_NAME", projectName)
     buildConfigField("BUILD_VERSION", projectVersion)
-    buildConfigField("BUILD_NUMBER", buildNumber)
     buildConfigField("GIT_BRANCH_NAME", grgit.branch.current().name)
     buildConfigField("GIT_COMMIT_ID", grgit.head().abbreviatedId)
     buildConfigField("BUILD_TIME",

@@ -8,6 +8,7 @@ kotlinBom = "1.9.23"
 kotlinWrappersBom = "1.0.0-pre.715"
 
 recharts = "2.7.2"
+rechartsWrapper = "2.7.2-pre.1"  # "${ recharts.version }-${ "pre"|"release" }.${ build.number }"
 
 [libraries]
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlinBom" }

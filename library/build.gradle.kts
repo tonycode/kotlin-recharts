@@ -11,7 +11,7 @@ plugins {
 
 val projectGroup = "dev.tonycode.kotlin-wrappers"
 val projectArtifact = "kotlin-recharts"
-val projectVersion = "0.1.0-SNAPSHOT"
+val projectVersion = libs.versions.rechartsWrapper.get()
 val isRelease = false  // release library build (for Maven Central publication)
 
 group = projectGroup

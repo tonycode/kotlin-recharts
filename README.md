@@ -5,6 +5,7 @@ kotlin-recharts
 [![Language](http://img.shields.io/badge/language-kotlin-blue.svg?style=flat)](https://kotlinlang.org)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+[![Maven Central](https://img.shields.io/maven-central/v/dev.tonycode.kotlin-wrappers/kotlin-recharts?label=maven&color=blue)](https://search.maven.org/search?q=g:dev.tonycode.kotlin-wrappers%20a:kotlin-recharts)
 ![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/dev.tonycode.kotlin-wrappers/kotlin-recharts?server=https%3A%2F%2Fs01.oss.sonatype.org)
 
 Kotlin wrapper for [**ReCharts**](https://recharts.org/) (React charting library)
@@ -36,14 +37,21 @@ some screenshots:
 
 ```kotlin
 repositories {
-    //...
-    maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+    mavenCentral()
+
+    // for snapshots:
+    //maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
 ```
 
 ```kotlin
-implementation("dev.tonycode.kotlin-wrappers:kotlin-recharts:0.1.0-SNAPSHOT") {
-    isChanging = true  // instruct Gradle to check for SNAPSHOT updates
+dependencies {
+    implementation("dev.tonycode.kotlin-wrappers:kotlin-recharts:2.7.2-pre.1")
+
+    // for snapshots:
+    //implementation("dev.tonycode.kotlin-wrappers:kotlin-recharts:0.1.0-SNAPSHOT") {
+    //    isChanging = true  // instruct Gradle to check for SNAPSHOT updates
+    //}
 }
 ```
 
