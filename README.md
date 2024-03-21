@@ -1,24 +1,38 @@
 kotlin-recharts
 ===============
 
-Kotlin wrapper for **ReCharts** (React charting library, https://recharts.org/)
+[![Platform](http://img.shields.io/badge/platform-kotlin/js-brightgreen.svg?style=flat)](https://kotlinlang.org/docs/js-overview.html)
+[![Language](http://img.shields.io/badge/language-kotlin-blue.svg?style=flat)](https://kotlinlang.org)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-based on **recharts** version: [2.7.2](https://github.com/recharts/recharts/releases/tag/v2.7.2)
+![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/dev.tonycode.kotlin-wrappers/kotlin-recharts?server=https%3A%2F%2Fs01.oss.sonatype.org)
 
-<hr />
+Kotlin wrapper for [**ReCharts**](https://recharts.org/) (React charting library)
 
-**LIVE DEMO**: https://tonycode.dev/demos/kotlin-recharts-demo/
+- for **recharts** version: [2.7.2](https://github.com/recharts/recharts/releases/tag/v2.7.2)
 
-(this is a deployed `demo` module from this repository)
+> [!CAUTION]
+> **Work-In-Progress**: This library currently consists of wrappers only
+> for a portion of components of the original `recharts` library.
+>
+> See [live demo](https://github.com/tonycode/kotlin-recharts#live-demo) and
+> [usage examples](https://github.com/tonycode/kotlin-recharts#wrappers-implemented)
+> to explore implemented features
 
-<hr />
+
+## LIVE DEMO
+
+> [!IMPORTANT]
+> https://tonycode.dev/demos/kotlin-recharts-demo
+>
+> (it is a deployed module `demo` from this repository)
+
+some screenshots:
 
 <img src="docs/kotlin-recharts-promo.png" alt="preview" title="preview" />
 
 
 ## Usage
-
-**Work-In-Progress**: Initial release are not ready yet, but SNAPSHOT's are available
 
 ```kotlin
 repositories {
@@ -83,7 +97,9 @@ val stubMeasurements = listOf(
 )
 ```
 
-see usage examples here:
+### Usage examples for Components
+
+Below is a list of references to demonstrational usage code in `demo` module
 
 - [SimpleLineChart](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_recharts_demo/ui/screens/line_chart/SimpleLineChart.kt)
 - [BiaxialLineChart](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_recharts_demo/ui/screens/line_chart/BiaxialLineChart.kt)
