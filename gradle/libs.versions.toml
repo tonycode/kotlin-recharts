@@ -5,7 +5,7 @@ gradle = "8.6"  # https://gradle.org/releases/
 yarn = "1.22.22"  # https://www.npmjs.com/package/yarn
 nodejs = "20.11.1"  # https://nodejs.org/en - LTS
 kotlinBom = "1.9.23"
-kotlinWrappersBom = "1.0.0-pre.636"
+kotlinWrappersBom = "1.0.0-pre.715"
 
 recharts = "2.7.2"
 
@@ -13,7 +13,7 @@ recharts = "2.7.2"
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlinBom" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
 kotlin-wrappers-bom = { module = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom", version.ref = "kotlinWrappersBom" }
-kotlinw-emotion = { module = "org.jetbrains.kotlin-wrappers:kotlin-emotion" }  # React Emotion (CSS), 11.11.1
+kotlinw-emotion = { module = "org.jetbrains.kotlin-wrappers:kotlin-emotion" }  # React Emotion (CSS), 11.11.4
 kotlinw-react = { module = "org.jetbrains.kotlin-wrappers:kotlin-react" }  # React, 18.2.0
 kotlinw-react-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-dom" }  # React DOM, 18.2.0
 
