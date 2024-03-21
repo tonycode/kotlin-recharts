@@ -13,6 +13,7 @@ recharts = "2.7.2"
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlinBom" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
 kotlin-wrappers-bom = { module = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom", version.ref = "kotlinWrappersBom" }
+kotlinw-antd = "dev.tonycode.kotlin-wrappers:kotlin-antd:5.10.3-pre.1"
 kotlinw-emotion = { module = "org.jetbrains.kotlin-wrappers:kotlin-emotion" }  # React Emotion (CSS), 11.11.4
 kotlinw-react = { module = "org.jetbrains.kotlin-wrappers:kotlin-react" }  # React, 18.2.0
 kotlinw-react-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-dom" }  # React DOM, 18.2.0

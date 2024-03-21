@@ -68,9 +68,7 @@ kotlin {
                 implementation(libs.kotlinw.react)
                 implementation(libs.kotlinw.react.dom)
                 implementation(libs.kotlinw.emotion)
-                implementation("dev.tonycode.kotlin-wrappers:kotlin-antd:0.1.0-SNAPSHOT") {
-                    isChanging = true
-                }
+                implementation(libs.kotlinw.antd)
 
                 // kotlin-recharts
                 implementation(projects.library)
